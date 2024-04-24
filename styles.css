@@ -64,7 +64,7 @@ body {
 
 .parallax {
   background-image: url("background.svg");
-  min-height: 1080px;
+  min-height: 100vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -78,8 +78,8 @@ body {
 }
 
 .welcome {
-  margin-top: 150px;
-  margin-left: 50px;
+  margin-top: 10vh;
+  margin-left: 10vh;
   float: left;
   width: 35%;
   text-align: justify;
@@ -88,7 +88,7 @@ body {
 .welcomeTitle {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  font-size: 110px;
+  font-size: 5.5rem;
   color: transparent;
   background: linear-gradient(45deg, #F44611, #ff7f50, #F44611, #ff7f50);
   background-size: 200% 100%;
@@ -263,6 +263,10 @@ body {
   color: #000;
 }
 
+.submit {
+  font-family: 'Poppins', sans-serif;
+}
+
 /* ---------------------------------- */
 
 .overlay {
@@ -271,7 +275,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.5); 
+  background-color: rgba(164, 164, 164, 0.5); 
   animation: fadeIn 0.8s ease forwards;
   z-index: 1; 
 }
@@ -291,10 +295,12 @@ body.modal-open {
   height: 100vh;
   margin-top: -10px;
   padding: 0px;
-  height:1080px;
+  height:100vh;
   background-color:rgb(255, 253, 253);
   font-size:36px;
   background-image: url("back.jpg");
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .information {
