@@ -1,0 +1,341 @@
+body {
+  font-family: 'Poppins', sans-serif; 
+  margin: 0;
+  overflow: hidden; 
+  background-color: #f0f0f0; 
+}
+
+.nav {
+  background-color: #fb6736;
+  display: flex; 
+  justify-content: space-between;  
+  align-items: center;
+  padding: 0 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 10px;
+  margin: 0 10px;;
+  text-align: center;
+  padding: 0px 0px 0px 0px;
+  position: relative;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: white;
+  width: 0; 
+  transition: width 0.4s ease; 
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+.logo {
+  height: 30px;
+  margin: 10px;
+  padding: 0;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.2);
+}
+
+/* ___________________________________________________ */
+
+.parallax {
+  background-image: url("background.svg");
+  min-height: 1080px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.nav, .welcome {
+  margin-bottom: 0px;
+}
+
+.welcome {
+  margin-top: 150px;
+  margin-left: 50px;
+  float: left;
+  width: 35%;
+  text-align: justify;
+}
+
+.welcomeTitle {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 110px;
+  color: transparent;
+  background: linear-gradient(45deg, #F44611, #ff7f50, #F44611, #ff7f50);
+  background-size: 200% 100%;
+  background-clip: text;
+  animation: gradientWave 2s ease infinite;
+  margin-bottom: 20px;
+}
+
+.welcomeBody {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+}
+
+@keyframes gradientWave {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.signup {
+  font-family: 'Poppins', sans-serif;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #F44611;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  font-size: 20px;
+}
+
+.signup:hover {
+  background-color: #ffd7cb;
+  color: black;
+}
+
+.login {
+  margin: 5px;
+  font-family: 'Poppins', sans-serif;
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.5s ease, box-shadow 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login:hover {
+  background-color: #ffd7cb;
+  color: black;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+/* ________________________________________________________________ */
+
+.textRollout {
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid orange;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  color: white;
+  animation: typing 5s steps(30, end) infinite, blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+  50% { width: 100%; }
+  51% { width: 0; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: orange; }
+}
+
+
+/* ___________________________________________________________________ */
+
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(absolute);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(absolute), translateX(absolute);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+}
+
+.signUpForm {
+  font-family: 'Poppins', sans-serif;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.8s ease forwards;
+  width: 400px; 
+  max-width: 90%; 
+  height: auto; 
+  padding: 20px; 
+  z-index: 2;
+}
+
+.signUpForm input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.signUpForm button {
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 20px;
+  background-color: #F44611;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  font-size: 20px;
+  float: right;
+}
+
+.signUpForm button:hover {
+  background-color: #ffd7cb;
+  color: black;
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #aaa;
+}
+
+.close:hover {
+  color: #000;
+}
+
+/* ---------------------------------- */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5); 
+  animation: fadeIn 0.8s ease forwards;
+  z-index: 1; 
+}
+
+.overlay::after {
+  animation: fadeOut 0.8s ease forwards;
+}
+
+body.modal-open {
+  overflow: hidden; 
+}
+
+/* -------------------------------------------------- */
+
+.changeContainer {
+  position: relative;
+  height: 100vh;
+  margin-top: -10px;
+  padding: 0px;
+  height:1080px;
+  background-color:rgb(255, 253, 253);
+  font-size:36px;
+  background-image: url("back.jpg");
+}
+
+.information {
+  width: 800px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.information h1 {
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.information p {
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-size: 30px;
+}
+
+.disclaimer {
+  font-size: 10px !important;
+  color: #333;
+}
+
+.counters {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  width: 200px;
+  height: 70px;
+  border-radius: 15px;
+  border: none;
+  color: white;
+  background-color: #fb6736;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
