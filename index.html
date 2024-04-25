@@ -14,7 +14,7 @@
   <header>
     <nav class="nav">
       <div class="nav-left">
-          <img src="logo.png" class="logo" onclick="window.location.href='#home'">
+          <img src="logo.png" class="logo" onclick="window.location.href='#home'" alt="Home Button">
             <div class="textRollout">
               Declutter your house this Autumn!
           </div>
@@ -41,20 +41,32 @@
         just your friends! </br></br> Not a member already? Join Us!</p>
         <button id="signUpButton" class="signup" onclick="openForm()">Sign Up!</button>
         
-        <div id="signUpForm" class="signUpForm">
-          <span id="closeFormBtn" class="close" onclick="closeForm()">&times;</span>
+        <div id="form-ct" class="signUpForm">
+          <span id="trigger-modal" class="close" onclick="closeForm()">&times;</span>
             <form action="#">
               <h2 type="text">Join our community today!</h2>
-              <p><i>Please fill in all fields </p>
-              <input type="text" id="name" name="name" placeholder="Given name" required><br>
-              <input type="text" id="surname" name="name" placeholder="Surname" required><br>
-              <input type="text" id="username" name="username" placeholder="Username" required><br>
-              <input type="text" id="password" name="password" placeholder="Password" required><br>
-              <input type="text" id="homeAddress" name="homeAddress" placeholder="Home Address" required><br>
-              <input type="text" id="workAddress" name="workAddress" placeholder="Work Address" required><br>
-              <input type="text" id="mobileNumber" name="mobileNumber" placeholder="Mobile Number" required><br>
-              <input type="email" id="email" name="email" placeholder="Email" required><br>
-              </i>
+              <p class="required"><i>Please fill in all fields</i></p>
+
+              <div class="formGroup">
+                <p><b>User Details</b></p>
+                  <input type="text" id="name" name="name" placeholder="Given name" required><br>
+                  <input type="text" id="surname" name="name" placeholder="Surname" required><br>
+                  <input type="text" id="username" name="username" placeholder="Username" required><br>
+                  <input type="text" id="password" name="password" placeholder="Password" required><br>
+              </div>
+
+              <div class="formGroup">
+                <p><b>Addresses</b></p>
+                <input type="text" id="homeAddress" name="homeAddress" placeholder="Home Address" required><br>
+                <input type="text" id="workAddress" name="workAddress" placeholder="Work Address" required><br>
+              </div>
+              <div class="formGroup">
+                <p><b>Contacts</b></p>
+                  <input type="text" id="mobileNumber" name="mobileNumber" placeholder="Mobile Number" required><br>
+                  <input type="email" id="email" name="email" placeholder="Email" required><br>
+                  </i>
+              </div>
+
               <button class="submit" type="submit">Register</button>
             </form>
         </div>
