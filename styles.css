@@ -86,22 +86,12 @@
   background: linear-gradient(45deg, #F44611, #ff7f50, #F44611, #ff7f50);
   text-shadow: 0 4px 10px rgba(156, 156, 156, 0.2);
   background-clip: text;
-  animation: gradientWave 2s ease infinite;
   margin-bottom: 20px;
 }
 
 .welcomeBody {
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
-}
-
-@keyframes gradientWave {
-  0% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 .signup {
@@ -188,17 +178,6 @@
   }
 }
 
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-  to {
-    opacity: 0;
-    transform: translate(-50%, -60%);
-  }
-}
-
 .signUpForm {
   font-family: 'Poppins', sans-serif !important;
   display: none;
@@ -217,6 +196,10 @@
   height: auto; 
   padding: 20px; 
   z-index: 2;
+}
+
+.signUpForm h2 {
+  font-family: 'Poppins', sans-serif;
 }
 
 .signUpForm input {
@@ -258,6 +241,10 @@
   margin-top: -10px;
 }
 
+.required p {
+  font-family: 'Poppins', sans-serif;
+}
+
 .close {
   position: absolute;
   top: 5px;
@@ -286,10 +273,6 @@
   background-color: rgba(164, 164, 164, 0.5); 
   animation: fadeIn 0.8s ease forwards;
   z-index: 1; 
-}
-
-.overlay::after {
-  animation: fadeOut 0.8s ease forwards;
 }
 
 body.modal-open {
