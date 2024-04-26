@@ -1,9 +1,10 @@
 .nav {
-  background-color: #fb6736;
+  background-color: #F44611;
   display: flex; 
   justify-content: space-between;  
   align-items: center;
   padding: 0 10px;
+  height: 65px;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -15,7 +16,7 @@
 .nav a {
   color: white;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 18pt;
   padding: 10px;
   margin: 0 10px;;
   text-align: center;
@@ -81,7 +82,7 @@
 .welcomeTitle {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  font-size: 9.2vh;
+  font-size: 8.4vh;
   color: transparent;
   background: linear-gradient(45deg, #F44611, #ff7f50, #F44611, #ff7f50);
   text-shadow: 0 4px 10px rgba(156, 156, 156, 0.2);
@@ -90,6 +91,7 @@
 }
 
 .welcomeBody {
+  width: 95%;
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
 }
@@ -107,7 +109,7 @@
   cursor: pointer;
   transition: background-color 0.5s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  font-size: 20px;
+  font-size: 18pt;
 }
 
 .signup:hover {
@@ -124,7 +126,7 @@
   color: rgb(0, 0, 0);
   text-align: center;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18pt;
   border-radius: 15px;
   cursor: pointer;
   transition: background-color 0.5s ease, box-shadow 0.3s ease;
@@ -146,7 +148,7 @@
   overflow: hidden;
   border-right: 3px solid orange;
   font-family: 'Poppins', sans-serif;
-  font-size: 20px;
+  font-size: 18pt;
   color: white;
   animation: typing 10s steps(30, end) infinite, blink-caret .75s step-end infinite;
 }
