@@ -42,12 +42,14 @@
         <button id="signUpButton" class="signup" onclick="openForm()">Sign Up!</button>
         
         <div id="form-ct" class="signUpForm">
-          <span id="trigger-modal" class="close" onclick="closeForm()">&times;</span>
+          <div>
+            <span id="trigger-modal" class="close" onclick="closeForm()">&times;</span>
+          </div>
             <form action="#">
               <h2 type="text"><b>Join our community today!</b></h2>
               <p class="required"><i>Please fill in all fields</i></p>
 
-              <div class="formGroup">
+              <div id="user-details" class="formGroup">
                 <p><b>User Details</b></p>
                   <input type="text" id="name" name="name" placeholder="Given name" required><br>
                   <input type="text" id="surname" name="name" placeholder="Surname" required><br>
@@ -55,12 +57,12 @@
                   <input type="text" id="password" name="password" placeholder="Password" required><br>
               </div>
 
-              <div class="formGroup">
+              <div id="address-details" class="formGroup">
                 <p><b>Addresses</b></p>
                 <input type="text" id="homeAddress" name="homeAddress" placeholder="Home Address" required><br>
                 <input type="text" id="workAddress" name="workAddress" placeholder="Work Address" required><br>
               </div>
-              <div class="formGroup">
+              <div id="contact-details" class="formGroup">
                 <p><b>Contacts</b></p>
                   <input type="text" id="mobileNumber" name="mobileNumber" placeholder="Mobile Number" required><br>
                   <input type="email" id="email" name="email" placeholder="Email" required><br>
